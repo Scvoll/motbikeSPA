@@ -1,0 +1,86 @@
+.characterBlock {
+    height: 554px;
+    background: {
+        image: url("../static/images/characteristicBack.jpg");
+        repeat: no-repeat;
+        position: center;
+    }
+    color: #ffffff;
+    .innerCharacter {
+        margin: 0 auto;
+        max-width: 1200px;
+        text-align: center;
+        padding-top: 90px;
+        .person {
+            display: inline-block;
+            max-width: 535px;
+            text-align: left;
+            font-size: 20px;
+            margin: 0 30px;
+            img {
+                display: block;
+                margin: 0 auto 50px auto;
+                width: 115px;
+                height: auto;
+            }
+            div:nth-child(2) {
+                font-family: "LatoLightItalic", Arial, sans-serif;
+                line-height: 1.2;
+                margin-bottom: 50px;
+            }
+            div:nth-child(3) {
+                font-family: "LatoBold", Arial, sans-serif;
+                margin-bottom: 18px;
+            }
+            div:nth-child(4) {
+                font-family: "LatoItalic", Arial, sans-serif;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .person:nth-child(1) {
+                display: none;
+            }
+        }
+
+        .personIcons {
+            width: 138px;
+            margin: 46px auto 0 auto;
+            svg {
+                font-size: 23px;
+                cursor: pointer;
+                &:hover {
+                    color: #6f6f6f;
+                }
+            }
+            svg:nth-child(1) {
+                float: left;
+            }
+            svg:nth-child(2) {
+                float: right;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .innerCharacter {
+            padding-top: 40px;
+            .person {
+                margin: 0 15px;
+                img {
+                    margin-bottom: 20px;
+                }
+                div:nth-child(2) {
+                    margin-bottom: 30px;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 340px) {
+        .innerCharacter {
+            padding-top: 20px;
+        }
+    }
+}

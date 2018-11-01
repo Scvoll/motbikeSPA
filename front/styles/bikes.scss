@@ -1,0 +1,83 @@
+.bikes {
+    background: {
+        image: url("../static/images/bikesback.jpg");
+        position: center;
+        repeat: no-repeat;
+    };
+    .innerBikes {
+        max-width: 1200px;
+        padding: 172px 12px 0 13px;
+        height: 620px;
+        text-align: left;
+        color: #ffffff;
+        margin: 0 auto;
+        div:nth-child(1){
+            font-family: "LatoBold", Arial, sans-serif;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        div:nth-child(2) {
+            font-family: "LatoRegular", Arial, sans-serif;
+            font-size: 20px;
+            max-width: 1136px;
+            margin-bottom: 74px;
+        }
+        .bikesImages {
+            text-align: center;
+            .bike {
+                display: inline-block;
+                margin-right: 30px;
+                div {
+                    position: relative;
+                    margin: -20px auto;
+                    height: 58px;
+                    width: 175px;
+                    background-color: #ce0000;
+                    text-align: center;
+                    line-height: 58px;
+                    font-size: 17px;
+                    font-family: "LatoBold", Arial, sans-serif;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #d23457;
+                    }
+                }
+                &:nth-child(4) {
+                    margin-right: 0;
+                }
+            }
+
+            @media (max-width: 1300px){
+                .bike:nth-child(1) {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 920px){
+                .bike:nth-child(2) {
+                    display: none;
+                }
+            }
+            @media (max-width: 640px){
+                .bike:nth-child(3) {
+                    display: none;
+                }
+                .bike {
+                    div {
+                        bottom: 270px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 488px) {
+        .innerBikes {
+            div:nth-child(1){
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

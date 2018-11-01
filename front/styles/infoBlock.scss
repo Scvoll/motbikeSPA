@@ -1,0 +1,159 @@
+@mixin turnBlock ($deg) {
+    -webkit-transform: rotate($deg+deg);
+    -moz-transform: rotate($deg+deg);
+    -ms-transform: rotate($deg+deg);
+    -o-transform: rotate($deg+deg);
+    transform: rotate($deg+deg);
+}
+
+.infoBlock {
+    position: relative;
+    height: 419px;
+    margin: -120px 13px 0 13px;
+    background-color: #ce0000;
+    padding: 63px 53px;
+    color: #ffffff;
+    .innerInfoBlock {
+        max-width: 1200px;
+        margin: 0 auto;
+        span {
+            font-family: "LatoBold", Arial, sans-serif;
+            font-size: 40px;
+        }
+        ul {
+            max-width: 274px;
+            margin-top: 67px;
+            li {
+                &:nth-child(1) {
+                    font-family: "LatoBold", Arial, sans-serif;
+                    font-size: 30px;
+                    margin-bottom: 39px;
+
+                }
+                &:nth-child(2) {
+                    font-family: "LatoRegular", Arial, sans-serif;
+                    font-size: 17px;
+                    margin-bottom: 42px;
+                }
+                &:nth-child(3) {
+                    width: 121px;
+                    border: 2px solid #ffffff;
+                    background-color: #ce0000;
+                    text-align: center;
+                    padding: 12px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #d23457;
+                        border-color: #919191;
+                    }
+                    span {
+                        font-family: "LatoRegular", Arial, sans-serif;
+                        font-size: 17px;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 1160px) {
+        .innerInfoBlock {
+            ul {
+                display: none;
+            }
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    
+    .gallary {
+        position: absolute;
+        width: 700px;
+        height: 380px;
+        top: 166px;
+        right: 10%;
+        img {
+            position: absolute;
+            max-width: 600px;
+            height: auto;
+            border: 10px solid #ffffff;
+            right: 30px;
+            &:nth-child(2) {
+                @include turnBlock(5)
+            }
+            &:nth-child(3) {
+                @include turnBlock(-5);
+            }
+        }
+        svg {
+            font-size: 22px;
+            margin-top: 175px;
+            cursor: pointer;
+            &:hover {
+                color: #919191;
+            }
+        }
+        .rightArrow {
+            position: absolute;
+            right: -20px;
+        }
+    }
+
+    @media (max-width: 1160px) {
+        .gallary {
+            position: relative;
+            margin: 0 auto;
+            right: 15px;
+            top: 70px;
+
+
+        }
+    }
+
+    @media (max-width: 864px) {
+        .gallary {
+            width: 600px;
+            img {
+                max-width: 500px;
+            }
+        }
+    }
+
+    @media (max-width: 726px) {
+        .gallary {
+            width: 500px;
+            img {
+                max-width: 400px;
+            }
+        }
+    }
+
+    @media (max-width: 625px) {
+        .gallary {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 625px) {
+    .infoBlock {
+        padding: 63px 10px;
+        .innerInfoBlock {
+            ul {
+                display: block;
+                margin: 25px auto 0 auto;
+
+            }
+            span {
+                display: block;
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+}
+

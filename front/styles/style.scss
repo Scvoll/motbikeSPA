@@ -1,0 +1,8 @@
+@import "./resetCSS", "./fonts", "./headerAndNavigation", "./infoBlock",
+"./ridersBlock", "./characteristic", "./bikes", './blog', './signUp', './footer';
+
+body {
+    max-width: 100%;
+    background-color: #1b1b1b;
+    min-width: 300px;
+}

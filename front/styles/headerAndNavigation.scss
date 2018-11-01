@@ -1,0 +1,183 @@
+@mixin iconsTab () {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 27px;
+    font-size: 24px;
+    color: #ffffff;
+    .motoIcon {
+        margin: 0 13px 0 25px;
+    }
+    .logoMot {
+        font-family: "LatoBlack", Arial, sans-serif;
+
+    }
+    .logoClub {
+        font-family: "LatoRegular", Arial, sans-serif;
+    }
+    .socialIcons {
+        display: inline-block;
+        float: right;
+        margin-right: 25px;
+        svg {
+            margin-left: 30px;
+            cursor: pointer;
+            &:hover {
+                color: #919191;
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        .logoMot, .logoClub {
+            display: none;
+        }
+    }
+}
+
+.header {
+    height: 72px;
+    max-width: 100%;
+    background-color: #ce0000;
+    .innerHeader {
+        @include iconsTab
+    }
+}
+
+.bannerBlock {
+    position: relative;
+    height: 858px;
+    background: {
+        image: url("../static/images/mainBanner.jpg");
+        repeat: no-repeat;
+        position: center;
+    }
+    .innerBannerBlock {
+        margin: 0 auto;
+        max-width: 1200px;
+        .menu {
+            position: fixed;
+            font-size: 40px;
+            color: white;
+            left: 10px;
+            margin-top: 5px;
+            z-index: 3;
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                display: block;
+            }
+        }
+        .navigation {
+            width: 386px;
+            height: 788px;
+            background-color: rgba(0, 0, 0, 0.54);
+            margin-left: -200px;
+            padding: 70px 100px 0 0;
+            ul {
+                background: rgba(73,50,203,0);
+                color: #ffffff;
+                font-family: "LatoRegular", Arial, sans-serif;
+                font-size: 20px;
+                height: 450px;
+                text-align: right;
+                li {
+                    margin-bottom: 33px;
+                    cursor: pointer;
+                    &:hover {
+                        color: #ce747f;
+                    }
+                }
+            }
+        }
+        @media (max-width: 820px) {
+            .navigation {
+                padding-right: 30px;
+                margin-left: -250px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .navigation {
+                position: fixed;
+                left: -356px;
+            }
+        }
+        
+
+        .bannerText {
+            max-width: 770px;
+            float: right;
+            margin: 275px 25px 0 0;
+            color: #ffffff;
+            li {
+                text-align: left;
+                &:nth-child(1) {
+                    font-family: "LatoRegular", Arial, sans-serif;
+                    font-size: 36px;
+                }
+                &:nth-child(2) {
+                    font-family: "LatoBlack", Arial, sans-serif;
+                    font-size: 117px;
+                }
+                &:nth-child(3) {
+                    font-family: "LatoRegular", Arial, sans-serif;
+                    font-size: 20px;
+                    margin-bottom: 50px;
+                    line-height: 1.5;
+                }
+
+            }
+            .learnButton {
+                width: 178px;
+                height: 64px;
+                background-color: #ce0000;
+                cursor: pointer;
+                text-align: center;
+                line-height: 64px;
+                &:hover {
+                    background-color: #d23457;
+                }
+                span {
+                    font-family: "LatoBold", Arial, sans-serif;
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+        @media (max-width: 1105px) {
+            .bannerText {
+                max-width: 500px;
+                margin: 50px auto;
+                li {
+                    text-align: left;
+                    &:nth-child(1) {
+                        font-size: 20px;
+                        margin-bottom: 30px;
+                    }
+                    &:nth-child(2) {
+                        font-size: 75px;
+                        margin-bottom: 30px;
+                    }
+                    &:nth-child(3) {
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 552px) {
+            .bannerText {
+                float: none;
+                margin: 0 50px;
+                position: relative;
+                top: 50px;
+                li:nth-child(2) {
+                    font-size: 40px;
+                }
+
+            }
+        }
+    }
+}
