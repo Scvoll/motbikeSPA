@@ -36,7 +36,7 @@ const TopFooter = () => {
 
 const MainFooter = () => {
     return (
-        <div className={'mainFooter'} >
+        <div className={'mainFooter'} id={"CONTACT"} >
             <div className={'innerMainFooter'}>
                 <About/>
                 <Events/>

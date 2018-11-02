@@ -4,8 +4,9 @@
 }
 
 .topFooter {
+    margin: 0 auto;
     max-width: 1600px;
-    background-color: #222222;
+    background-color:  #222222;
     .innerTopFooter {
         @include iconsTab;
         height: 80px;
@@ -187,6 +188,7 @@
 .rights {
     background-color: #222222;
     max-width: 1600px;
+    margin: 0 auto;
     .innerRights {
         position: relative;
         padding: 25px 5px 0 5px;

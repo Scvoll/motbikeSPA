@@ -16,8 +16,8 @@ const imgSources = [bikeOne, bikeTwo, bikeThree, bikeFour];
 export const Bikes = () => {
     return (
         <div className={'bikes'}>
-            <div className={'innerBikes'}>
-                <div>{topBikesText[0]}</div>
+            <div className={'innerBikes'} >
+                <div id={"SHOP"}>{topBikesText[0]}</div>
                 <div>{topBikesText[1]}</div>
                 <div className={"bikesImages"}>
                     {imgSources.map((src, id) => {

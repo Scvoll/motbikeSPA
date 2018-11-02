@@ -10,7 +10,7 @@ library.add(faMotorcycle, faYoutubeSquare,  faInstagram ,faTwitter, faFacebookF,
 
 export const Header = () => {
     return (
-        <div className={"header"}>
+        <div className={"header"} id={"HOME"}>
             <div className={"innerHeader"}>
                 <IconsTab/>
             </div>

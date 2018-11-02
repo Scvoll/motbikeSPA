@@ -9,7 +9,7 @@ const InfoText = ["LOREM IPSUM IS SIMPLY DUMMY TEXT",
 
 export const ClubInfo = () => {
     return (
-        <div className={"infoBlock"}>
+        <div className={"infoBlock"} id={"ABOUT US"}>
             <div className={"innerInfoBlock"}>
             <span>{InfoText[0]}</span>
             <ul>

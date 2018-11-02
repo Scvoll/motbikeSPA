@@ -9,7 +9,7 @@ const personInfo = `Lorem Ipsum is simply dummy text of the printing and typeset
 
 export const Characteristic = () => {
     return (
-        <div className={"characterBlock"}>
+        <div className={"characterBlock"} id={"LISTINGS"}>
             <div className={"innerCharacter"}>
                 <PersonBlock/>
                 <PersonBlock/>

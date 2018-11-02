@@ -7,7 +7,7 @@ not only five centuries, but`;
 
 export const Blog = () => {
     return (
-        <div className={"blog"}>
+        <div className={"blog"} id={"BLOG"}>
             <div className={'innerBlog'}>
                 <div>CLUB BLOG</div>
                 <div>{blogText}</div>

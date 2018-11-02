@@ -55,24 +55,31 @@
         margin: 0 auto;
         max-width: 1200px;
         .menu {
-            position: fixed;
+
+            background-color: rgba(0, 0, 0, 0.85);
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 50px;
+            padding: 10px;
             font-size: 40px;
             color: white;
-            left: 10px;
-            margin-top: 5px;
-            z-index: 3;
+            z-index: 4;
             display: none;
+            cursor: pointer;
+            &:hover {
+                color: #b69ba5;
+            }
+            -webkit-transition: background-color 0.2s;
+            -moz-transition: background-color 0.2s;
+            -ms-transition: background-color 0.2s;
+            -o-transition: background-color 0.2s;
+            transition: background-color 0.2s;
         }
 
-        @media (max-width: 700px) {
-            .menu {
-                display: block;
-            }
-        }
         .navigation {
             width: 386px;
             height: 788px;
-            background-color: rgba(0, 0, 0, 0.54);
+            background-color: rgba(0, 0, 0, 0.85);
             margin-left: -200px;
             padding: 70px 100px 0 0;
             ul {
@@ -90,6 +97,11 @@
                     }
                 }
             }
+            -webkit-transition: left 0.3s;
+            -moz-transition: left 0.3s;
+            -ms-transition: left 0.3s;
+            -o-transition: left 0.3s;
+            transition: left 0.3s;
         }
         @media (max-width: 820px) {
             .navigation {
@@ -100,8 +112,12 @@
 
         @media (max-width: 700px) {
             .navigation {
-                position: fixed;
-                left: -356px;
+                position: absolute;
+                height: 470px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                z-index: 3;
+                background-color: rgba(0, 0, 0, 0.85);
             }
         }
         
@@ -169,7 +185,6 @@
 
         @media (max-width: 552px) {
             .bannerText {
-                float: none;
                 margin: 0 50px;
                 position: relative;
                 top: 50px;

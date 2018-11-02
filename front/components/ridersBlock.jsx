@@ -14,14 +14,14 @@ const bottomRidersText = ['LOREM IPSUM IS SIMPLY DUMMY TEXT LOREM IPSUM IS SIMPL
 export const RidersBlock = () => {
     return (
         <div>
-            <div className={"topRidersText"}>
+            <div className={"topRidersText"} id={'OFFER'}>
                 <div className={"innerTopRidersText"}>
                     <div>{topRidersText[0]}</div>
                     <div>{topRidersText[1]}</div>
                 </div>
             </div>
             <div className={"ridersImages"}/>
-            <div className={"bottomRidersText"}>
+            <div className={"bottomRidersText"}  id={"SERVICES"}>
                 <div className={'innerBottomRidersText'}>
                     <BottomTextBlock/>
                     <BottomTextBlock/>
