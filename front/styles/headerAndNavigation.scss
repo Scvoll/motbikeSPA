@@ -63,7 +63,7 @@
             padding: 10px;
             font-size: 40px;
             color: white;
-            z-index: 4;
+            z-index: 5;
             display: none;
             cursor: pointer;
             &:hover {
@@ -112,11 +112,10 @@
 
         @media (max-width: 700px) {
             .navigation {
-                position: absolute;
                 height: 470px;
                 border-bottom-right-radius: 20px;
                 border-top-right-radius: 20px;
-                z-index: 3;
+                z-index: 4;
                 background-color: rgba(0, 0, 0, 0.85);
             }
         }

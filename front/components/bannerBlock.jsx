@@ -36,15 +36,16 @@ export class BannerBlock extends React.Component {
 
         window.addEventListener("resize", () => {
             let width = document.body.clientWidth;
+            if (this.state.menuIsActive) {
+                this.toggleMenu();
+            }
             if (width <= 700) {
                 this.setState(
                     {
                         navStyle: {left: "-356px"},
                         displayMenu: {display: "block"}
                     });
-                if (this.state.menuIsActive) {
-                    this.toggleMenu();
-                }
+
 
                 if (window.pageYOffset > 72) {
                     this.setState({menuNavIsFixed: {marginTop: "-72px", position: "fixed"}})
@@ -59,9 +60,7 @@ export class BannerBlock extends React.Component {
                         menuNavIsFixed: {marginTop: 0, position: "absolute"}
                     });
 
-                if (this.state.menuIsActive) {
-                    this.toggleMenu();
-                }
+
             }
         });
 

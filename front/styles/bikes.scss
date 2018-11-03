@@ -25,6 +25,7 @@
         .bikesImages {
             text-align: center;
             .bike {
+                position: relative;
                 display: inline-block;
                 margin-right: 30px;
                 div {
@@ -44,6 +45,20 @@
                 }
                 &:nth-child(4) {
                     margin-right: 0;
+                }
+                .price {
+                    opacity: 0;
+                    font-family: "LatoBold", Arial, sans-serif;
+                    position: absolute;
+                    font-size: 60px;
+                    color: #ce0000;
+                    top: 100px;
+                    left: -50px; //48
+                    -webkit-transition: left 0.6s cubic-bezier(.45,-0.61,.5,3), opacity 0.4s linear;
+                    -moz-transition: left 0.6s cubic-bezier(.45,-0.61,.5,3), opacity 0.4s linear;
+                    -ms-transition: left 0.6s cubic-bezier(.45,-0.61,.5,3), opacity 0.4s linear;
+                    -o-transition: left 0.6s cubic-bezier(.45,-0.61,.5,3), opacity 0.4s linear;
+                    transition: left 0.6s cubic-bezier(.45,-0.61,.5,3), opacity 0.4s linear;
                 }
             }
 
