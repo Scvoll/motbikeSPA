@@ -106,12 +106,14 @@
         }
         @media (min-width: 1400px) {
             position: relative;
+            z-index: 4;
         }
 
         @media (max-width: 820px) {
             .navigation {
                 padding-right: 30px;
                 margin-left: -250px;
+                z-index: 4;
             }
         }
 
