@@ -9,10 +9,12 @@
 .infoBlock {
     position: relative;
     height: 419px;
-    margin: -120px 13px 0 13px;
+    margin: -120px auto 0 auto;
     background-color: #ce0000;
     padding: 63px 53px;
     color: #ffffff;
+    max-width: 1494px;
+
     .innerInfoBlock {
         max-width: 1200px;
         margin: 0 auto;

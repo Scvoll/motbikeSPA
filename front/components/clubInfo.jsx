@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import gallaryImage from '../static/images/gallaryImage.jpg'
+import { text } from "./popUpTextBlock";
 
 const InfoText = ["LOREM IPSUM IS SIMPLY DUMMY TEXT",
     "our customers are enjoying",
@@ -39,7 +40,7 @@ export class ClubInfo extends React.Component{
                     <ul>
                         <li key={1}>{InfoText[1]}</li>
                         <li key={2}>{InfoText[2]}</li>
-                        <li key={3}><span>LEARN MORE</span></li>
+                        <li key={3} onClick={() => this.props.click(text.substring(0, 600))}><span>LEARN MORE</span></li>
                     </ul>
                     <div className={"gallary"}>
                         <FontAwesomeIcon icon={"angle-left"}

@@ -1,6 +1,5 @@
 import React from "react"
 import avatar from "../static/images/avatar.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const personInfo = `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -13,10 +12,6 @@ export const Characteristic = () => {
             <div className={"innerCharacter"}>
                 <PersonBlock/>
                 <PersonBlock/>
-                <div className={'personIcons'}>
-                    <FontAwesomeIcon icon={'angle-left'}/>
-                    <FontAwesomeIcon icon={'angle-right'}/>
-                </div>
             </div>
         </div>
     )

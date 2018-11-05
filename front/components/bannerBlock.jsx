@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import {text} from "./popUpTextBlock";
 
 const navMenu = ["HOME","ABOUT US", "OFFER", "SERVICES", "LISTINGS", "SHOP", "BLOG","CONTACT"];
 const bannerText = ["LOREM IPSUM IS SIMPLY DUMMY TEXT",
@@ -59,8 +60,6 @@ export class BannerBlock extends React.Component {
                         displayMenu: {display: "none"},
                         menuNavIsFixed: {marginTop: 0, position: "absolute"}
                     });
-
-
             }
         });
 
@@ -111,7 +110,7 @@ export class BannerBlock extends React.Component {
                                          ...this.state.displayMenu
                                      }}
                                      onClick={(e) => this.toggleMenu(e)}/>
-                    <BannerTextBlock/>
+                    <BannerTextBlock click={this.props.click}/>
                     <div className={"navigation"}
                          style={{...this.state.navStyle, ...this.state.menuNavIsFixed}}
                          onClick={(e) => e.stopPropagation()}>
@@ -129,7 +128,8 @@ export class BannerBlock extends React.Component {
     }
 }
 
-const BannerTextBlock = () => {
+
+const BannerTextBlock = (props) => {
     return (
         <ul className={"bannerText"}>
             {bannerText.map((item,key) => {
@@ -137,7 +137,7 @@ const BannerTextBlock = () => {
                     <li key={key}>{item}</li>
                 )
             })}
-            <li className={"learnButton"}><span>LEARN MORE</span></li>
+            <li className={"learnButton"} onClick={() => props.click(text.substring(0,850))}><span>LEARN MORE</span></li>
         </ul>
     )
 };

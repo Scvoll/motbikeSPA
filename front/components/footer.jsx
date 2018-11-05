@@ -1,5 +1,6 @@
 import React from 'react'
 import { IconsTab } from "./header";
+import {text} from "./popUpTextBlock";
 
 const footerText = {
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -14,11 +15,11 @@ const footerText = {
         ]
 };
 
-export const Footer = () => {
+export const Footer = (props) => {
     return (
         <div>
             <TopFooter/>
-            <MainFooter/>
+            <MainFooter click={props.click}/>
             <Copyrights/>
         </div>
     )
@@ -34,11 +35,11 @@ const TopFooter = () => {
     )
 };
 
-const MainFooter = () => {
+const MainFooter = (props) => {
     return (
         <div className={'mainFooter'} id={"CONTACT"} >
             <div className={'innerMainFooter'}>
-                <About/>
+                <About click={props.click}/>
                 <Events/>
                 <Contacts/>
             </div>
@@ -46,12 +47,12 @@ const MainFooter = () => {
     )
 };
 
-const About = () => {
+const About = (props) => {
     return (
         <div className={'about'}>
             <div>ABOUT MOTCLUB</div>
             <div>{footerText.about}</div>
-            <div>MORE INFO</div>
+            <div onClick={() => props.click(text.substring(0,1000))}>MORE INFO</div>
         </div>
     )
 };

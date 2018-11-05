@@ -1,4 +1,5 @@
 import React from 'react'
+import {text} from "./popUpTextBlock";
 
 export const topRidersText = ['LOREM IPSUM IS SIMPLY DUMMY TEXT',
     `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -11,7 +12,7 @@ const bottomRidersText = ['LOREM IPSUM IS SIMPLY DUMMY TEXT LOREM IPSUM IS SIMPL
      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
       when an unknown`];
 
-export const RidersBlock = () => {
+export const RidersBlock = (props) => {
     return (
         <div>
             <div className={"topRidersText"} id={'OFFER'}>
@@ -23,8 +24,8 @@ export const RidersBlock = () => {
             <div className={"ridersImages"}/>
             <div className={"bottomRidersText"}  id={"SERVICES"}>
                 <div className={'innerBottomRidersText'}>
-                    <BottomTextBlock/>
-                    <BottomTextBlock/>
+                    <BottomTextBlock click={props.click}/>
+                    <BottomTextBlock click={props.click}/>
                 </div>
             </div>
         </div>
@@ -32,12 +33,12 @@ export const RidersBlock = () => {
     )
 };
 
-const BottomTextBlock = () => {
+const BottomTextBlock = (props) => {
     return (
         <div className={"ridersBottomBlock"}>
             <div>{bottomRidersText[0]}</div>
             <div>{bottomRidersText[1]}</div>
-            <div>LEARN MORE</div>
+            <div onClick={() => props.click(text.substring(0,700))}>LEARN MORE</div>
         </div>
     )
 };

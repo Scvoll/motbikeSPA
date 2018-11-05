@@ -42,24 +42,6 @@
                 display: none;
             }
         }
-
-        .personIcons {
-            width: 138px;
-            margin: 46px auto 0 auto;
-            svg {
-                font-size: 23px;
-                cursor: pointer;
-                &:hover {
-                    color: #6f6f6f;
-                }
-            }
-            svg:nth-child(1) {
-                float: left;
-            }
-            svg:nth-child(2) {
-                float: right;
-            }
-        }
     }
 
     @media (max-width: 600px) {
